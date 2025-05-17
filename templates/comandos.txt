@@ -1,0 +1,37 @@
+git add .
+git commit -m "mensagem sobre a atualização"
+git push
+-----------------------------------------------------------------------------------------------
+coloca a pasta no vc code API-CEP
+git clone (url do git)
+cd API-CEP (entra na pasta)
+
+git init (inicia o git local)
+
+checar se o python ta funcionando
+
+pip install virtualenv (instala a maquina virtual)
+python.exe -m pip install --upgrade pip atualizar
+
+criar arquivo no vscode na pasta API-CEP chamado app.py
+criar venv
+python -m venv .venv
+
+muda pro command prompt
+checar se esta na pasta API-CEP
+.venv\Scripts\activate
+ se deu certo aparece
+(.venv) C:\Users\Aluno\Desktop\Projeto API\API-CEP>
+instalar o flask dentro da virtual machine
+pip install flask
+atualizar
+python.exe -m pip install --upgrade pip
+
+Checar o auto save em file(arquivo) ativalo
+executar o flask
+flask run
+---------------------------------------------------------------------------------------------
+para desinstalar o venv desativa ele e instala denovo 
+.venv\Scripts\deactivate 
+
+pip install -r requirements.txt
