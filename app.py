@@ -26,19 +26,19 @@ def tempo():
     resposta = requests.get(url)
     return resposta.json()
 '''
-@app.route('/tempo/',methods=['GET'])
+@app.route('/tempo',methods=['GET'])
 def tempo():
-    key = c4380707dde2442f4b78202712252204
-    url = f"https://api.weatherapi.com/v1/current.json?key={key}&q={cidade}&lang=pt"
+    key = "c4380707dde2442f4b78202712252204"
+    cidade = "Presidente Prudente"
+    #url = f"https://api.weatherapi.com/v1/current.json?key={key}&q={cidade}&lang=pt"
+    url = f'https://api.weatherapi.com/v1/current.json?key=c4380707dde242f4b78202712252204&q=Sao Paulo&lang=pt'
     resposta = requests.get(url)
     result = resposta.json()
-    
+
     temperatura = result['current']['temp_c']
     umidade = result['current']['humidity']
 
-    # return resposta.json()
-    return render_template("paginatempo.html",
-    temp=temperatura, umid=umidade)
+    return render_template("paginatempo.html", temp=temperatura, umid=umidade)
 
 if __name__== '__main__':
     app.run(debug=True)
