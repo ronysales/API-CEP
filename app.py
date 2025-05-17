@@ -28,9 +28,11 @@ def tempo():
 '''
 @app.route('/tempo/',methods=['GET'])
 def tempo():
-    url = f'https://api.weatherapi.com/v1/current.json?key=c4380707dde242f4b78202712252204&q=Sao Paulo&lang=pt'
+    key = c4380707dde2442f4b78202712252204
+    url = f"https://api.weatherapi.com/v1/current.json?key={key}&q={cidade}&lang=pt"
     resposta = requests.get(url)
-    result = resposta.json
+    result = resposta.json()
+    
     temperatura = result['current']['temp_c']
     umidade = result['current']['humidity']
 
